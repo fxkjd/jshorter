@@ -1,6 +1,6 @@
 # JShorter
 
-An Express made API to create an URL shortening service.
+A Node.js API to create an URL shortening service.
 
 
 ## Installing / Getting started
@@ -18,7 +18,8 @@ npm start
 ## Developing
 
 ### Built With
-Express
+* Express
+* MongoDB
 
 ## Configuration
 
@@ -39,5 +40,10 @@ TBC
 ## Licensing
 
 ## TODO
-
+* Add tests
+* Add more logging and logging options
+* Migrate logging to winston
+* Add model validation
+* Refactor callback hell functions to async/await
+* Complete this README
 
