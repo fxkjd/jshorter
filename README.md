@@ -39,6 +39,8 @@ TBC
 
 ## Licensing
 
+  [MIT](LICENSE)
+
 ## TODO
 * Add tests
 * Add more logging and logging options
