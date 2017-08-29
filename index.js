@@ -45,6 +45,11 @@ app.use(function(req, res, next) {
 app.use(function(err, req, res, next) {
     // set locals, only providing error in development
     console.log(err);
+    errorResponse = defaultError;
+    //handle mongoose validation errors
+    if (err.name === "ValidationError") {
+        errorResponse["description"] = err.errors.name.message;
+    }
     res.status(err.status || 500);
     res.json(defaultError);
 });
@@ -54,7 +59,7 @@ auth.config(passport);
 
 // Mongoose config
 const url = 'mongodb://' + config.db.host + ':' + config.db.port + '/' + config.db.name;
-console.log(url);
+console.log("MongoDB connection: " + url);
 mongoose.connect(url, {
     useMongoClient: true,
 });
