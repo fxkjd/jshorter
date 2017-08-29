@@ -36,7 +36,11 @@ There are two configuration files located in the `/config` folder:
 
 ## Api Reference
 
+The `/src/routes` folder contains the API route implementations. By default each route returns a JSON response but it is possible to overwrite them in order to use XML, HTML templates (EJS, Handlebars, ...) or whatever you like.
+
 ### User
+
+User management API.
 
 - /users/login
 - /users/logout
@@ -44,7 +48,7 @@ There are two configuration files located in the `/config` folder:
 
 ### Links
 
-A user session is necessary in order  to interact with The Links API.
+Link management API. A valied session is necessary in order to interact with The Links API (see User API).
 
 - /links/
 - /links/new
@@ -59,5 +63,4 @@ A user session is necessary in order  to interact with The Links API.
 * Add tests
 * Add more logging and logging options
 * Migrate logging to winston
-* Add model validation
-* Refactor callback hell functions to async/await
+* Do some refactor
