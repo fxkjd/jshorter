@@ -2,12 +2,12 @@
 
 A Node.js API to create an URL shortening service.
 
+## Dependencies 
 
-## Installing / Getting started
-
-### Dependencies 
 * Express
 * MongoDB
+
+## Installing / Getting started
 
 Just clone this report and run:
 
