@@ -5,41 +5,55 @@ A Node.js API to create an URL shortening service.
 
 ## Installing / Getting started
 
-Just clone this report and then:
+### Dependencies 
+* Express
+* MongoDB
+
+Just clone this report and run:
 
 ```
 npm install
 ```
 
+To start JShorter run: 
+
 ```
 npm start
 ```
 
-## Developing
-
-### Built With
-* Express
-* MongoDB
-
 ## Configuration
 
-TBC
+There are two configuration files located in the `/config` folder:
 
-## Tests
-
-TBC
+- app.json
+    - port - Listening port
+    - secret - A random secret for passport sessions
+    - env - Log level
+- db.json
+    - host - MongoDB IP
+    - port - MongoDB port
+    - name - MongoDB database
 
 ## Api Reference
 
-TBC
+### User
 
-## Database
+- /users/login
+- /users/logout
+- /users/register
 
-TBC
+### Links
+
+A user session is necessary in order  to interact with The Links API.
+
+- /links/
+- /links/new
+- /links/update/:id
+- /links/delete/:id
 
 ## Licensing
 
-  [MIT](LICENSE)
+  [LGPL3](LICENSE)
 
 ## TODO
 * Add tests
@@ -47,5 +61,3 @@ TBC
 * Migrate logging to winston
 * Add model validation
 * Refactor callback hell functions to async/await
-* Complete this README
-
